@@ -1,0 +1,8 @@
+{
+  "name": "FileHub Public File Library",
+  "short_name": "FileHub",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#3157d5"
+}

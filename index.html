@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#3157d5">
+  <title>FileHub — Public File Library</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top"><div class="brand">File<span>Hub</span></div><span class="tag">Upload anywhere · View anytime</span></header>
+  <main>
+    <section class="hero">
+      <h1>One library. Everyone can view.</h1>
+      <p>Upload a file once and share this website link with friends.</p>
+      <form id="uploadForm" class="upload">
+        <label class="choose">Choose a file<input id="fileInput" type="file" required></label>
+        <button type="submit">Upload file</button>
+      </form>
+      <p class="hint">Maximum 50 MB per file. Files uploaded here are public to everyone.</p>
+      <div id="status" role="status"></div>
+    </section>
+
+    <section class="library">
+      <div class="section-head"><div><h2>Public files</h2><p id="count">Loading files…</p></div>
+        <input id="search" type="search" placeholder="Search files…" aria-label="Search files">
+      </div>
+      <div id="fileList" class="file-list"></div>
+    </section>
+
+    <section id="viewer" class="viewer hidden">
+      <div class="viewer-head"><h2 id="viewerTitle">File preview</h2><button id="closeViewer" class="secondary">Close</button></div>
+      <div id="preview" class="preview"></div>
+      <p id="previewNote" class="hint"></p>
+    </section>
+    <p class="offline-note">Offline tip: when you first visit with internet, FileHub saves available files in this browser for offline viewing. Keep the tab open until saving finishes.</p>
+  </main>
+  <footer>FileHub · Public sharing demo</footer>
+  <script src="/app.js"></script>
+</body>
+</html>
